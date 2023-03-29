@@ -8,32 +8,37 @@ document.getElementById("app").innerHTML = `
 `;
 
 /**
- * スプレッド構文
+ * map, filter, reduce
  */
 
-// 配列の展開
-// const arr1 = [1, 2];
-// console.log(arr1);
-// console.log(...arr1);
+const nameArr = ["田中", "山田", "佐藤"];
 
-// const sumFunc = (num1, num2) => console.log(num1 + num2);
-// sumFunc(arr1[0], arr1[1]);
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index + 1}番目は${nameArr[index]}`);
+// }
 
-// sumFunc(...arr1);
+/**
+ * map
+ */
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
 
-// まとめる
-// const arr2 = [1, 2, 3, 4, 5];
-// const [num1, num2, ...arr3] = arr2;
-// console.log(num1);
-// console.log(num2);
-// console.log(arr3);
+// nameArr.map((name) => console.log(name));
 
-// 配列のコピー、結合
-// const arr4 = [10, 20];
-// const arr5 = [30, 40];
+/**
+ * filter
+ */
+// const numArr = [1, 2, 3, 4, 5];
+// const oddArr = numArr.filter((num) => num % 2 === 1);
+// console.log(oddArr);
 
-// const arr6 = [...arr4];
-// console.log(arr6);
+/**
+ * index
+ */
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
 
-// const arr7 = [...arr4, ...arr5];
-// console.log(arr7);
+const newNameArr = nameArr.map((name) =>
+  name === "佐藤" ? name : `${name}さん`
+);
